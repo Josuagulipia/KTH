@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Petualangan Belajar — Analisis Data</title>
+    <meta
+      name="description"
+      content="Media pembelajaran interaktif berbasis website untuk siswa SMA/SMK"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <aside
+        id="sidebar-nav"
+        class="sidebar"
+        aria-label="Navigasi utama"
+      ></aside>
+
+      <div id="main-column">
+        <header id="topbar">
+          <div id="app-title-wrap">
+            <span class="topbar-logo" aria-hidden="true">🦉</span>
+            <h1 id="app-title">Petualangan Belajar</h1>
+          </div>
+
+          <div id="hud" aria-label="Status belajar">
+            <div id="hud-progress-track"><div id="hud-progress-bar"></div></div>
+            <span class="hud-chip" id="hud-level">🧭 Lv.1</span>
+            <span class="hud-chip">⭐ <span id="hud-xp">0</span></span>
+            <span class="hud-chip">🔥 <span id="hud-streak">0</span></span>
+          </div>
+
+          <div id="topbar-actions">
+            <button
+              id="profile-btn"
+              class="icon-toggle"
+              title="Ganti nama siswa"
+            >
+              👤
+            </button>
+            <button
+              id="sound-toggle-btn"
+              class="icon-toggle"
+              title="Suara efek"
+            >
+              🔊
+            </button>
+            <button
+              id="music-toggle-btn"
+              class="icon-toggle"
+              title="Musik latar"
+            >
+              🎵
+            </button>
+            <button id="dark-toggle-btn" class="icon-toggle" title="Mode gelap">
+              🌙
+            </button>
+            <button
+              id="mode-toggle-btn"
+              class="icon-toggle mode-btn"
+              title="Mode Guru"
+            >
+              🧑‍🏫 Mode Guru
+            </button>
+          </div>
+        </header>
+
+        <main id="app-main" role="main"></main>
+      </div>
+    </div>
+
+    <nav id="bottom-nav" aria-label="Navigasi bawah"></nav>
+    <div id="toast-layer" aria-live="polite"></div>
+    <div id="confetti-layer" aria-hidden="true"></div>
+
+    <script src="data.js"></script>
+    <script src="state.js"></script>
+    <script src="ui.js"></script>
+    <script src="activities.js"></script>
+    <script src="render.js"></script>
+    <script src="guru.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
